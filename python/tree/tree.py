@@ -3,7 +3,6 @@ from vector import Vector
 import numpy as np
 from constants import Constants as const
 from particle import Particle
-from massive_object import MassiveObject
 
 class Tree:
     delta = 0.4

@@ -1,5 +1,4 @@
 from vector import Vector
-from massive_object import MassiveObject
 
 class Particle:
     def __init__(self, position, velocity, mass):
