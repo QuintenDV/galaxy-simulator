@@ -7,8 +7,8 @@ from time import time
 if __name__ == "__main__":
 	Tree.delta = 0.4
 	epsilon = 0.01
-	timestep = 0.1
-	integration_time = 1000
+	timestep = 0.001
+	integration_time = 10
 	n_save_points = 1000
 
 	start = time()
@@ -21,7 +21,8 @@ if __name__ == "__main__":
 				n_save_points=n_save_points,
 				physics=physics,
 				integrator=leapfrog_integrator,
-				input_file="resources/input_100p.txt")
+				input_file="resources/input_stable.txt",
+				output_file="resources/output_stable.txt")
 
 	print("Begin integration")
 	integrator.integrate()

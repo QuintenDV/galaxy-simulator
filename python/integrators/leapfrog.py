@@ -15,6 +15,7 @@ class Leapfrog:
     def update_particle(self, particle, others, tree):
         ml = tree.makeMassList(particle)
         # Bug here: velocity is always one full timestep behind
+        # TODO clean this up a bit
         temp_vel = particle.half_step_velocity + self.h*self.physics.acceleration(particle, ml)
         temp_r_half = particle.get_position() + self.h*(temp_vel)
         particle.set_velocity( (temp_vel + particle.half_step_velocity) / 2 )
