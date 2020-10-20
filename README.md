@@ -9,6 +9,7 @@ The input is a text file with the initial conditions of the system. The system c
 
 ### example
 ![example_gif](example.gif)
+![example_gif](example2.gif)
 
 ## Somewhat more detailed explanation
 After each timestep all particles need to be updated. A particled is affected by the gravitational pull of all the other particles in the system. So for each particle, the force exerted on it by all the other particles is calculated. Once these accelerations are calculate, the positions and velocites of all particles can be updated.
