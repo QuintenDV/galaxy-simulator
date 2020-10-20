@@ -41,15 +41,10 @@ class NBodyIntegrator:
     def integrate(self):
         self._write_header()
         self.current_step = 0
-        from time import time
         while self._integration_condition():
-            a = time()
             self.step()
-            b = time()
             self._update_energy()
-            c = time()
             self.save_results_to_file()
-            d = time()
             self.current_step += 1
 
     def _write_header(self):
